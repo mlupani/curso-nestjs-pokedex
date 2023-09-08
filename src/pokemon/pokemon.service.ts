@@ -10,7 +10,7 @@ import { UpdatePokemonDto } from './dto/update-pokemon.dto';
 export class PokemonService {
 
   constructor(
-    
+
     @InjectModel( Pokemon.name )
     private readonly pokemonModel: Model<Pokemon>,
 
