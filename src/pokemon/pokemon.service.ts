@@ -32,8 +32,9 @@ export class PokemonService {
 
 
 
-  findAll() {
-    return `This action returns all pokemon`;
+  async findAll(PaginationDto) {
+    const { limit = 10, offset = 0 } = PaginationDto
+    return await this.pokemonModel.find().limit(limit).skip(offset);
   }
 
   async findOne(term: string) {
